@@ -87,14 +87,14 @@ angular.module('myApp.calc', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     return precision ? integral + '.' +  padding + fraction : integral;
   }
 
-  this.getParams = function(bulletCost,bulletCount,powderCost,powderWeight,powderWeightUsed,primerCost,primerCount){
-     bCost = bulletCost;
-     bCount = bulletCount;
-     pCost = powderCost;
-     pWeight = powderWeight;
-     pWeightUsed = powderWeightUsed;
-     prCost = primerCost;
-     prCount = primerCount;
+  this.getParams = function($scope){
+     bCost = $scope.bulletCost;
+     bCount = $scope.bulletCount;
+     pCost = $scope.powderCost;
+     pWeight = $scope.powderWeight;
+     pWeightUsed = $scope.powderWeightUsed;
+     prCost = $scope.primerCost;
+     prCount = $scope.primerCount;
    }
 
    this.doCalc = function(){
@@ -149,7 +149,7 @@ angular.module('myApp.calc', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
 .controller('CalcCtrl',function($rootScope,$scope, $window, messages,CalcService) {
    $scope.calculate = function(){
-     CalcService.getParams($scope.bulletCost,$scope.bulletCount,$scope.powderCost,$scope.powderWeight,$scope.powderWeightUsed,$scope.primerCost,$scope.primerCount);
+     CalcService.getParams($scope);
      if(CalcService.doCalc()){
        $rootScope.$broadcast('eventFired', {});
      }
