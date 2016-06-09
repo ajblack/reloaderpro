@@ -1,0 +1,62 @@
+<body id="page-top">
+
+    <section id="calcArea">
+      <div class="container" ng-controller="CalcCtrl">
+        <!--<img src="bower_components/bootstrap/dist/img/hillary.jpeg" class="img-responsive" alt="Responsive image">-->
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2>
+            <div id="paramArea">
+              <p><strong>Bullet cost: $<input class="custom-input-text" ng-model="bulletCost"></p><br>
+              <p>Bullet count: <input class="custom-input-text" ng-model="bulletCount"></p>
+              <br>
+              <p>Powder cost: $<input class="custom-input-text" ng-model="powderCost"></p><br>
+              <p>Powder weight (in pounds):<input class="custom-input-text" ng-model="powderWeight"></p><br>
+              <p>Powder weight used (in grains): <input class="custom-input-text" ng-model="powderWeightUsed"></p>
+              <br>
+              <p>Primer cost: $<input class="custom-input-text" ng-model="primerCost"></p><br>
+              <p>Primer count: <input class="custom-input-text" ng-model="primerCount"></strong></p>
+              <br>
+            </div>
+          </h2>
+            <h4><button class="btn btn-primary" ng-click="calculate()">Calculate</button></h4>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <div ng-controller="ModalCtrl">
+      <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">{{modalTitle}}</h3>
+        </div>
+        <div class="modal-body">
+        <ul>
+            <li ng-repeat="item in items">
+                <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+            </li>
+        </ul>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        </div>
+    </script>
+    </div>
+
+</body>
