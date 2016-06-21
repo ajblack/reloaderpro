@@ -154,5 +154,13 @@ angular.module('myApp.calc', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
        $rootScope.$broadcast('eventFired', {});
      }
    }
+})
 
+.directive('inDirective', function() {
+  // return the directive link function.
+  return {
+    restrict: 'AE',
+
+    templateUrl: "home/inputDirective.html"
+  }
 })

@@ -1,0 +1,23 @@
+<script type="text/ng-template" id="static/inputDirective.html">
+<div class="container" ng-controller="CalcCtrl">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+    <h2>
+    <div id="paramArea">
+    <p><strong>Bullet cost: $<input class="custom-input-text" ng-model="bulletCost"></p><br>
+    <p>Bullet count: <input class="custom-input-text" ng-model="bulletCount"></p>
+    <br>
+    <p>Powder cost: $<input class="custom-input-text" ng-model="powderCost"></p><br>
+    <p>Powder weight (in pounds):<input class="custom-input-text" ng-model="powderWeight"></p><br>
+    <p>Powder weight used (in grains): <input class="custom-input-text" ng-model="powderWeightUsed"></p>
+    <br>
+    <p>Primer cost: $<input class="custom-input-text" ng-model="primerCost"></p><br>
+    <p>Primer count: <input class="custom-input-text" ng-model="primerCount"></strong></p>
+    <br>
+    </div>
+    </h2>
+    <h4><button class="btn btn-primary" ng-click="calculate()">Calculate</button></h4>
+    </div>
+  </div>
+</div>
+</script>
