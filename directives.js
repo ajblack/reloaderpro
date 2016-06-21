@@ -3,5 +3,6 @@ angular.module('myApp.directives', []).
     // return the directive link function.
     return function(scope, element, attrs) {
       // do stuff here
+      //sample
     }
   });
